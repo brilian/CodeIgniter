@@ -67,5 +67,26 @@
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 
+$route['api/auth/register']      = 'api/auth/register';
+$route['api/auth/login']         = 'api/auth/login';
+$route['api/auth/profile']       = 'api/auth/profile';
+$route['api/auth/logout']        = 'api/auth/logout';
+$route['api/auth/preferences']   = 'api/auth/preferences';
+
+$route['api/dictionary']         = 'api/dictionary/index';
+$route['api/dictionary/(:any)']  = 'api/dictionary/entry/$1';
+
+$route['api/games']                              = 'api/games/index';
+$route['api/games/(:any)/sessions']              = 'api/games/sessions/$1';
+$route['api/games/sessions/(:any)']              = 'api/games/session/$1';
+$route['api/games/sessions/(:any)/events']       = 'api/games/record_event/$1';
+$route['api/games/sessions/(:any)/complete']     = 'api/games/complete/$1';
+
+$route['api/leaderboards']       = 'api/leaderboards/index';
+$route['api/badges']             = 'api/badges/index';
+$route['api/badges/mine']        = 'api/badges/mine';
+$route['api/cv/evaluate']        = 'api/cv/evaluate';
+$route['api/cv/prompts']         = 'api/cv/prompts';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
