@@ -1,8 +1,11 @@
 {
     "require": {
-        "mikey179/vfsStream": "*"
+        "mikey179/vfsStream": "*",
+        "phpoffice/phpspreadsheet": "^1.29",
+        "mpdf/mpdf": "^8.2",
+        "nesbot/carbon": "^3.7"
     },
     "require-dev": {
-		"phpunit/phpunit": "*"
-	}
+        "phpunit/phpunit": "*"
+    }
 }

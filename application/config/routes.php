@@ -64,8 +64,28 @@
 |
 */
 
-$route['default_controller'] = 'welcome';
-$route['404_override'] = '';
+$route['default_controller'] = 'auth';
+$route['404_override'] = 'errors/page_missing';
+$route['translate_uri_dashes'] = FALSE;
+
+$route['login'] = 'auth/login';
+$route['logout'] = 'auth/logout';
+$route['password/forgot'] = 'auth/forgot';
+$route['password/reset'] = 'auth/reset';
+
+$route['dashboard'] = 'dashboard/index';
+
+$route['users/reset-password/(:num)'] = 'users/reset_password/$1';
+$route['students/import'] = 'students/import';
+$route['students/export/template'] = 'students/export_template';
+
+$route['reports/export/pdf/(:num)'] = 'reports/export_pdf/$1';
+$route['reports/export/excel/(:num)'] = 'reports/export_excel/$1';
+$route['reports/export/template/(:num)'] = 'reports/export_template/$1';
+$route['reports/show/(:num)'] = 'reports/show/$1';
+
+$route['grades/lock/(:num)'] = 'grades/lock/$1';
+$route['grades/unlock/(:num)'] = 'grades/unlock/$1';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

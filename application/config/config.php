@@ -39,7 +39,9 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= (isset($_SERVER['HTTP_HOST'])
+	? ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https://' : 'http://').$_SERVER['HTTP_HOST'].'/'
+	: 'http://localhost/');
 
 /*
 |--------------------------------------------------------------------------
@@ -258,7 +260,7 @@ $config['cache_path'] = '';
 | http://codeigniter.com/user_guide/libraries/sessions.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'er4por_super_secret_2025_key';
 
 /*
 |--------------------------------------------------------------------------
